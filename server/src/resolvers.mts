@@ -1,10 +1,12 @@
 import items from "../dataset/items.mjs";
+import todos from "../dataset/todos.mjs";
 
 const Resolvers = {
   Query: {
-    getAllItems: () => items,
+    getAllItems: () => items.products,
+    getAllTodos: () => todos.todos,
     getItemById: (_: any, args: any) => {
-      return items.find((items) => items.id === args.id);
+      return items.products.find((items) => items.id === args.id);
     },
   },
 };

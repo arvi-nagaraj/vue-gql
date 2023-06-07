@@ -8,6 +8,6 @@ const server = new ApolloServer({
   resolvers: Resolvers,
 });
 
-startStandaloneServer(server).then(({ url }) =>
-  console.log(`🚀 Server ready at ${url}`)
-);
+startStandaloneServer(server, {
+  listen: { port: 4000 },
+}).then(({ url }) => console.log(`🚀 Server ready at ${url}`));
