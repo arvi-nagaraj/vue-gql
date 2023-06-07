@@ -5,7 +5,7 @@ const config: CodegenConfig = {
   documents: ['src/**/*.vue', 'src/**/*.query.ts'],
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
-    './src/gql/': {
+    './src/generated/gql/': {
       preset: 'client',
       config: {
         useTypeImports: true,
